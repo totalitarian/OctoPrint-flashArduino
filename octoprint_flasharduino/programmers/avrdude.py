@@ -17,7 +17,8 @@ class AVRDudeProgrammer(Programmer):
         self.register_board(gettext("Melzi"), dict(board="atmega1284p", protocol="arduino", baudrate="115200"))
         self.register_board(gettext("Sanguino /w ATmega644P"), dict(board="atmega644p", protocol="stk500", baudrate="57600"))
         self.register_board(gettext("PrintrBoard"), dict(board="usb1286", protocol="avr109", baudrate="115200"))
-
+        self.register_board(gettext("ATmega2560 250000 (Baud) Leapfrog CreatrHS, Ultimaker 2, RAMPS 1.4, RAMBo"), dict(board="m2560", protocol="wiring", baudrate="250000"))
+        
     def get_assets(self):
         return dict(
             js=["js/programmers/avrdude.js"]
